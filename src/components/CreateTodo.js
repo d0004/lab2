@@ -18,7 +18,6 @@ const CreateTodo = () => {
             },
             showCancelButton: true,
             confirmButtonText: 'Create',
-            showLoaderOnConfirm: true,
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch({type: 'ADD_TODO', payload: {title: result.value, completed: 0}})
